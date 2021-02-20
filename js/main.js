@@ -46,8 +46,8 @@ let products = [
     },
 	{
         name: 'MusicPlayer',
-        thumb: './images/yebo.png',
-        link: 'https://ngbinhdev.web.app/',
+        thumb: './images/music-player.png',
+        link: 'https://ngbinhfed.web.app/',
     },
 ];
 let productsHtml = products.map((product, index) => {
