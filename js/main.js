@@ -35,9 +35,14 @@ let products = [
         link: './product/Jogger/index.html',
     },
     {
-        name: 'Riot Design',
+        name: 'TodoListv1',
         thumb: './images/yebo.png',
-        link: './product/Yebo/index.html',
+        link: 'https://binhnguyen2504.github.io/todolist-react-v1/',
+    },
+    {
+        name: 'TodoListv2',
+        thumb: './images/yebo.png',
+        link: 'https://todolist-react-v2.vercel.app/',
     },
 ];
 let productsHtml = products.map((product, index) => {
