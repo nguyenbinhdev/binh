@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif; }
+  * .container {
+    min-height: 100vh;
+    outline: none;
+    width: 80%;
+    font-size: 30px;
+    margin: 100px auto; }
+    * .container h2 {
+      font-size: 2.5em;
+      text-transform: capitalize;
+      font-weight: 900;
+      margin-bottom: 50px;
+      text-align: center; }
+    * .container p {
+      line-height: 1.50; }
+  * .color-container {
+    width: 250px;
+    position: absolute;
+    top: 50%;
+    left: -250px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background: black;
+    color: #fff;
+    transition: 0.5s linear; }
+    * .color-container h2 {
+      line-height: 50px;
+      text-align: center;
+      text-transform: uppercase; }
+    * .color-container .box {
+      width: 100%;
+      min-height: 200px;
+      border-top: 1px solid #fff; }
+      * .color-container .box p {
+        margin-left: 10px;
+        text-transform: uppercase;
+        color: orange;
+        font-weight: 800;
+        margin-top: 20px; }
+      * .color-container .box ul {
+        width: 100%;
+        min-height: 150px;
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        align-items: center;
+        flex-wrap: wrap; }
+        * .color-container .box ul li {
+          width: 50px;
+          height: 50px;
+          border: 1px solid #fff;
+          text-align: center;
+          line-height: 50px;
+          text-transform: capitalize;
+          color: orange;
+          margin: 5px; }
+    * .color-container .nav {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background: white;
+      font-size: 2em;
+      padding: 6.7px 10px;
+      color: black; }
+  * .color-container.active {
+    left: 0px; }
+
+/*# sourceMappingURL=main.css.map */

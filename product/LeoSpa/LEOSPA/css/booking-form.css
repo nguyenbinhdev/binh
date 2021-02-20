@@ -1,0 +1,92 @@
+.booking{
+    display: flex;
+    background-color: var(--bg-block);
+}
+@media screen and (max-width: 1023px) {
+    .booking{
+        flex-direction: column;
+    }
+}
+.booking__images{
+    width: 40%;
+}
+.booking__images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.booking__form{
+    width: 60%;
+    padding: 10rem;   
+}
+@media screen and (max-width: 1023px){
+    .booking__form{
+        padding: 2rem;
+    }
+}
+/* Thằng này phải nằm sau images & form, responsive có tính thứ tự */
+@media screen and (max-width: 1023px){
+    .booking > *{
+        width: 100%;
+    }
+}
+/* Style cho những thẻ input & select trong form */
+.booking__form input, 
+.booking__form select{
+    text-transform: uppercase;
+    color: var(--gray-light);
+    font-size: 1.2rem;
+    background-color: transparent;
+    padding: 1.5rem 0;
+    border: 0;
+    border-bottom: 1px solid currentColor;
+    width: 100%;
+    border-radius: 0;
+    outline: none;
+    font-family: var(--primary-font);
+    -webkit-appearance: none; /*Ản dấu mũi tên ở thanh select*/
+}
+/* Ẩn những mũi tên mặc định - tăng giảm ngày giờ */
+.booking__form input::-webkit-inner-spin-button,
+.booking__form input::-webkit-outer-spin-button,
+.booking__form select::-webkit-inner-spin-button,
+.booking__form select::-webkit-outer-spin-button
+{
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* ---------------------- */
+.booking__form .form-group{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+}
+.booking__form .form-group input,
+.booking__form .form-group select,
+.booking__form .form-group .custom-input{
+    width: calc(50% - 1rem);
+}
+.booking__form .form-group .custom-input{
+    position: relative;
+}
+.booking__form .form-group .custom-input input{
+    width: 100%;
+}
+.booking__form .form-group .custom-input i{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+/* Ẩn mũi tên ở input date */
+.booking__form .form-group .custom-input input::-webkit-calendar-picker-indicator {
+    -webkit-appearance: none;
+    display: none;
+}
+
+.booking__form .form-single{
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+}

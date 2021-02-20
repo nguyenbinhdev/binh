@@ -1,0 +1,99 @@
+$wrapper : 192rem;
+$container: 117rem;
+@mixin item ($size){
+    text-transform: uppercase;
+    color: #333333;
+    list-style-type: none;
+    font-size: $size;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s linear;
+    &:hover {
+        color: pink;
+    }
+}
+html {
+    font-size: 62.5%;
+    background-color: pink;
+    box-sizing: content-box;
+}
+
+.wrapper {
+    max-width: $wrapper;
+    header {
+        background-color: #fff;
+        .container {
+            padding: 2rem;
+            max-width: $container;          
+            margin: 0 auto;
+            .menu {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .menu__logo {
+                    display: block;
+                }
+                .menu__list {           
+                    display: flex;            
+                    .menu__item {
+                        @include item(2rem);
+                        margin-right: 4rem;         
+                    }
+                }
+                .menu__button {
+                    display: none;
+                    opacity: 0;
+                    visibility: hidden;
+                    color: #333;
+                    font-size: 2.5rem;
+                    transition: color 0.1s linear;
+                    &:hover {
+                        color: pink;
+                    }
+                }
+                @media screen and (max-width: 762px) {
+                    .menu__list {
+                        display: none;   
+                    }
+                    .menu__button {
+                        display: block;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }           
+        }
+    }
+    .menu__list-respon {
+        opacity: 0.8;
+        z-index: 20;
+        margin-top: 1rem;
+        background-color: #fff;
+        display: none;
+        @media creen and (min-width: 763px) {
+            .menu__list-respon {
+                display: none;
+            }
+        }
+        .container {
+            padding: 2rem 0rem;
+            max-width: $container;
+            margin: 0 auto;
+            .menu__respon {
+                padding-left: 0;
+                min-height: 70vh;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-between;
+                align-items: center;
+                
+                .menu__item-res {
+                    @include item(3rem);
+                }
+            }
+        }
+        
+    }
+}
+
+

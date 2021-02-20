@@ -1,0 +1,41 @@
+header {
+    min-height: 80rem;
+    background-image: url('../images/img-bg-header.jpg');
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+}
+.nav {
+    margin-top: 3rem;
+}
+.nav__list {
+    display: flex;
+    align-items: center;
+    
+}
+
+.nav__item {
+    padding: 0 4rem;
+    position: relative;
+}
+.nav__link {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--heading);
+    font-size: 1.6rem;
+    text-decoration: none;
+    position: relative;
+    display: block;
+}
+/* Dấu chấm giữa các menu-item */
+.nav__item:first-child:after, 
+.nav__item:nth-child(4):after {
+    content: ".";
+    position: absolute;
+    font-size: 3rem;
+    bottom: 0;
+    right: 0;
+}

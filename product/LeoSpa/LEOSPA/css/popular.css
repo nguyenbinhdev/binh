@@ -1,0 +1,62 @@
+.popular{
+    padding-top: 14rem;
+    padding-bottom: 14rem;
+    background-color: #fff;
+}
+/* Phần heading đã được style trong setting.css từ trước  */
+/* sytle cho danh sách 3 img  */
+.popular__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* style cho thẻ li  */
+.popular__item{
+    width: calc(33.33% - 13.33px);
+    border: 1px solid #eee;
+}
+@media screen and (max-width: 767px){
+    .popular__item{
+        width: 100%;
+        margin-bottom: 2.5rem;
+    }
+}
+/* style cho thẻ a bên trong li  */
+.popular__link{
+    height: 100%;
+    display: block;
+    padding: 2rem 2rem 4.5rem;
+    text-align: center;
+    transition: box-shadow 0.2s linear; /*Transition BOX-SHADOW */
+}
+.popular__link:hover{
+    box-shadow: 0 0 14px 14px rgba(0, 0, 0, 0.025); 
+}
+.popular__link img{
+    width: 100%;
+    height: 26.5rem;
+    object-fit: cover;
+}
+.popular__link .title{
+    font-family: var(--secondary-font);
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    margin-top: 5rem;
+    color: var(--gray-dark);
+}
+.popular__link .desc{
+    font-size: 1.4rem;
+    line-height: 2;
+    margin-bottom: 4rem;
+    color: var(--gray-light);
+}
+/* Button ở mỗi li  */
+.btn--secondary{
+    background-color: var(--gray-dark);
+}
+.popular__link .btn--secondary{
+    transition: background-color 0.2s linear; /* Transition BACKGROUND button */
+}
+.popular__link:hover .btn--secondary{
+    background-color: var(--primary-color);
+}

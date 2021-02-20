@@ -1,0 +1,23 @@
+Đo full width trong psd: 1920px
+Container(canh giữa đo): 1140px
+
+Độ rộng của background bên trái là 240px/1920px => chiếm 12.5%. Nó nằm bên trái trung tâm => background-position: left center;
+
+Độ rộng của background bên phải là 840px/1920px => chiếm 43.5%. Nó nằm bên phải trên cùng =>	position: absolute; 
+		top: 0xp; 
+		right: 0px;
+
+
+Khoảng cách giữa các Item trong Menu là 50px từ đó ta có thể chia cho 2 tức là 25px mỗi bên nên chỗ menu__item là margin: 0 2.5rem.
+
+
+Nhìn các đường line để sử dụng grid, ta được: 12 cột (67.5px) cách nhau (30px) 
+Cho thêm 15px mỗi bên trái phải container để có khoảng trống lúc co lại dưới gia diện mobile. => 1140 + 15 + 15 = 1170px. Hoặc có thể cho gtri khác 15 cũng ok
+
+POPULAR:
+Ở danh sách 3 hình ảnh, vì thẻ a không bọc thẻ a được nên nút Read More thay bằng button.
+Các li cách nhau 20px, có 3 li => tổng khoảng cách 40px => đêm chia 3 cho mỗi li ta đc 13.(3)px => width của mỗi li là 33.33%(trên tổng 1140px của container) - 13.33px. Đưa phép tính này vào hàm calc [width: calc(33.33% - 13.33px);]
+
+
+
+

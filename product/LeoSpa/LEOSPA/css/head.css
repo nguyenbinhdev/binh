@@ -1,0 +1,196 @@
+/* Tổng thể header gồm cả hình nền bên trái */
+.header{
+    min-height: 100vh; /*vh: viewport height == 100% browser*/
+    position: relative;
+    background-image: url("../images/leaf.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 12.5%; 
+}
+/* Hình ảnh bên phải */
+.header__image{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    max-width: 43.5%;
+}
+@media screen and (max-width: 767px) {
+    .header__image{
+        display: none;
+    }
+}
+/* Thanh Menu + Logo (Header__Top) */
+.header__top{
+    padding-top: 2rem;
+    display: flex;
+    align-items: baseline;
+}
+@media screen and (max-width: 767px){
+    .header__top{
+        justify-content: space-between; /* khoảng trống chính giữa cho 2 phần từ đầu & cuối sang 2 bên */
+    }
+}
+
+.header__logo{
+    max-width: 10rem;
+}
+
+/* Riêng Menu */
+.menu{
+    margin-left: 14%; /* (185-25)x100/1140 */
+    position: relative; /*Để khi co lại tấm hình bên phải absolute phải nằm dưới menun này*/
+    z-index: 2;
+}
+/* Ẩn thanh Menu */
+@media screen and (max-width: 767px) {
+    .menu {
+        display: none;
+      }
+}
+/* Tạo nút menu ở dạng ẩn */
+.menu__collapse{
+    display: none;
+    position: relative;
+    top: -5px;
+    font-size: 2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+ /* Hiện nút menu  */
+@media screen and (max-width: 767px) { 
+    .menu__collapse{
+        display: block;
+    }
+}
+.menu__list{
+    display: flex;
+    align-items: center;
+}
+.menu__item{
+    margin: 0px 2.5rem;
+}
+.menu__link{
+    color: var(--gray-dark);
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.2s linear;
+}
+.menu__link:hover{
+    color: var(--primary-color);
+}
+
+/* Nội dung bên dưới của header (Header__Content) */
+.header__content{
+    padding-top: 19rem;
+    position: relative;
+    max-width: 55.5rem;
+    z-index: 2;
+}
+@media screen and (max-width: 767px) {
+    .header__content{
+        padding-top: 7rem;
+    }
+}
+
+.header__content-slogan{
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.header__content-title{
+    font-size: 6rem;
+    color: var(--gray-dark);
+    font-family: var(--secondary-font);
+    font-weight: bold;
+    margin-bottom: 3rem;
+    line-height: 1.2;
+}
+@media screen and (max-width: 767px) {
+    .header__content-title{
+        font-size: 4rem;
+    }
+}
+.header__content-desc{
+    font-size: 1.5rem;
+    color: var(--gray-dark);
+    margin-bottom: 5rem;
+    line-height: 1.5;
+}
+/* Two button allow: */
+.header__content-cta{
+    display: flex;
+    align-items: center;
+}
+@media screen and (max-width: 767px) {
+    .header__content-cta{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+/*Reverse now*/
+.header__content-cta > a:first-child{ 
+    margin-right: 5rem;
+}
+@media screen and (max-width: 767px) { 
+    .header__content-cta > a:first-child{
+        margin-right: 0px;
+        margin-bottom: 2.5rem;
+    }
+}
+
+/* Watch out story */
+.btn__play-video{
+    display: flex;
+    align-items: center;
+}
+.btn__play-video i{
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5rem;
+    background-color: var(--bg-block);
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+.btn__play-video span{
+    color: var(--gray-dark);
+    font-size: 1.4rem;
+}
+
+/* 
+Style for button 
+btn: button
+btn--primary: button chủ đạo
+btn--icon: button có icon
+btn--rounded: button bo tròn góc 
+*/
+.btn{
+    display: inline-block;
+    vertical-align: middle;
+    border: 0px;
+    outline: none;
+    padding: 1.5rem 3rem;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-family: var(--primary-font);
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.btn--primary{
+    background-color: var(--primary-color);
+}
+.btn--rounded{
+    border-radius: 5rem;
+}
+.btn--icon i{
+    margin-left: 1rem;
+    color: inherit; /*inherit: thừa kế*/
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Responsive</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <div class="menu">
+                    <div class="menu__logo">
+                        <img src="logo.png" alt="Logo">
+                    </div>
+    
+                    <ul class="menu__list">
+                        <li class="menu__item">home</li>
+                        <li class="menu__item">about</li>
+                        <li class="menu__item">feature</li>
+                        <li class="menu__item">contact</li>
+                        <li class="menu__item">service</li>
+                    </ul>
+                    <div class="menu__button">
+                        <i class="fas fa-align-justify"></i>
+                    </div>                   
+                </div>
+            </div>
+        </header>
+        <section class="menu__list-respon">
+            <div class="container">
+                <ul class="menu__respon">
+                    <li class="menu__item-res">home</li>
+                    <li class="menu__item-res">about</li>
+                    <li class="menu__item-res">feature</li>
+                    <li class="menu__item-res">contact</li>
+                    <li class="menu__item-res">service</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+   
+    <script>
+        $(document).ready(function(){          
+            $(".menu__button").click(function(){
+                $('.menu__list-respon').stop().slideToggle(1000);
+            });         
+        });
+    </script>
+</body>
+</html>

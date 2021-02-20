@@ -1,0 +1,56 @@
+.tweet {
+    padding: 12.5rem 1.5rem 7rem;
+    background-color: var(--bg-light);
+    text-align: center;
+}
+.tweet__icon {
+    font-size: 4rem;
+    color: #00aefd;
+    margin-bottom: 3rem;
+}
+.tweet__heading {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+.tweet__location,
+.tweet__author {
+    color: var(--heading);
+    font-weight: bold;
+}
+.tweet__time {
+    font-weight: 300;
+    color: var(--text);
+    padding-left: 1.5rem;
+    margin-left: 1.5rem;
+    position: relative;
+}
+.tweet__time::before {
+    content: "/";
+    position: absolute;
+    left: 0;
+    top: 1;
+}
+.tweet__content {
+    font-size: 2.4rem;
+    color: var(--text);
+    line-height: 1.4;
+    font-style: italic;
+    max-width: 104.5rem;
+    margin: 0 auto 10rem;
+}
+.tweet__pagi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tweet__pagi-item {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 5rem;
+    border: 1px solid var(--text);
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+.tweet__pagi-item.is-active {
+    background-color: var(--text);
+}

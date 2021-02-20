@@ -1,0 +1,121 @@
+:root {
+  --primary-color: #ff817e;
+  --gray-dark: #263a41;
+  --gray-light: #888;
+  --white: white;
+  --black: black;
+  --bg-block: #fff9f8;
+  --primary-font: "Roboto";
+  --secondary-font: "Rufina";
+  --wrapper: 192rem;
+  --container: 117rem;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: var(--primary-font);
+  font-weight: 300;
+  color: var(--gray-dark);
+  background-color: var(--white);
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+a {
+  display: block;
+  text-decoration: none;
+}
+.wrapper {
+  max-width: var(--wrapper);
+  margin-left: auto;
+  margin-right: auto;
+}
+.container {
+  max-width: var(--container);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Style for heading  */
+.heading{
+  margin-bottom: 7rem;
+  text-align: center;
+}
+.heading__title{
+  font-size: 4.2rem;
+  font-weight: bold; 
+  font-family: var(--secondary-font);
+  margin-bottom: 4rem;
+}
+.heading__desc{
+  color: var(--gray-light);
+  font-size: 1.5rem;
+  line-height: 1.6;
+  max-width: 65rem;
+  margin: 0 auto;
+}
+/* 
+Style for button 
+btn: button
+btn--primary: button chủ đạo
+btn--icon: button có icon
+btn--rounded: button bo tròn góc 
+*/
+.btn{
+  display: inline-block;
+  vertical-align: middle;
+  border: 0px;
+  outline: none;
+  padding: 1.5rem 3rem;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-family: var(--primary-font);
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.btn--primary{
+  background-color: var(--primary-color);
+}
+.btn--rounded{
+  border-radius: 5rem;
+}
+.btn--icon i{
+  margin-left: 1rem;
+  color: inherit; /*inherit: thừa kế*/
+}
+
+.btn--secondary{
+  background-color: var(--gray-dark);
+}
+.popular__link .btn--secondary{
+  transition: background-color 0.2s linear; /* Transition BACKGROUND button */
+}
+.popular__link:hover .btn--secondary{
+  background-color: var(--primary-color);
+}
+/* style for button backtotop */
+#backtop{
+  padding: 2rem;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  position: fixed;
+  bottom: 5rem;
+  right: 2rem;
+  z-index: 10;
+  font-size: 1.5rem;
+  color: var(--bg-block);
+}
+@media screen and (max-width: 767px){
+  #backtop{
+    padding: 1.5rem;
+  }
+}

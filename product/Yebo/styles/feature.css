@@ -1,0 +1,116 @@
+.feature__header {
+    background-color: var(--bg-light);
+    padding: 11rem 1.5rem 14rem;
+}
+.feature__header-desc {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: var(--text);
+    max-width: 106rem;
+    margin: 0 auto;
+    text-align: center;
+}
+/* Start feature--item: Contains 2 columns */
+
+.feature__item {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 60rem;
+    overflow: hidden;
+}
+/* Feature item 1 */
+/* Start comlumn 1 */
+.feature__item-img {
+    width: 67%;
+    position: relative;
+}
+.feature__item-img .img__bg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.feature__item-img .img__brand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+/* Start column 2 */
+.feature__item-content {
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.feature__item-content-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 67%;
+    background-color: #fff;
+    padding: 0 7rem;
+    position: relative;
+}
+.feature__item-content-top:after {
+    content: "";
+    position: absolute;
+    bottom: -5%;
+    left: 50%;
+    width: 2rem;
+    height: 2rem;
+    background-color: #fff;
+    z-index: 7;
+    transform: translate(-50%, -50%) rotate(-45deg)
+}
+.feature__item-text {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--text);
+    text-align: justify; 
+    padding-bottom: 3rem;
+    position: relative;
+}
+.feature__item-text:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6rem;
+    height: 1px;
+    background-color: #333
+}
+.feature__item-content-bottom {
+    height: 33%;
+}
+.feature__item-content-bottom img.img__bg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* Feature item 2: tương tự như item 1 */ 
+.feature__item:nth-child(2) .feature__item-img {
+    order: 2;
+}
+/* Feature item 3 */
+.feature__item:last-child > .feature__item-img {
+    width: 33%;
+}
+.feature__item:last-child > .feature__item-content {
+    width: 34%;
+}
+/* Hai class này xài chung cho tất cả feature  */
+.feature__img-top {
+    margin: 0 auto 3rem;
+}
+.feature__heading {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    text-transform: uppercase;
+    color: var(--heading);
+    margin-bottom: 2rem;
+    font-weight: bold;
+    text-align: center;
+}

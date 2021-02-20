@@ -1,0 +1,78 @@
+.images {
+    display: flex;
+    justify-content: space-between;
+    height: 53.5rem;
+    /* overflow: hidden; */
+}
+.images__block {
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+}
+.images__block:first-child {
+    flex-direction: column;
+}
+.images__block:last-child {
+    flex-direction: column-reverse;
+}
+.images__block-item {
+    height: 50%;
+    width: 100%;
+}
+/* Hai tấm hình nhỏ bên trên  */
+.images__block-item:first-of-type {
+    display: flex;
+}
+.images__block-item .images__item {
+    width: 50%;
+    height: 100%;
+}
+/* Tấm hình ngang dài bên dưới */
+.images__block-item:last-of-type .images__item{
+    width: 100%;
+}
+/* HIỆU ỨNG KHI HOVER */
+.images__item {
+    position: relative;
+}
+.images__item::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #70c6a6c9;;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 10;
+    display: none;
+    transition: 0.3s;
+}
+.images__item-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.images__item-brand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    text-align: center;
+    display: none;
+    transition: 0.3s;
+}
+.images__item-brand > img {
+    margin: 0 auto;
+}
+.images__item-text {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+.images__item:hover:before,
+.images__item:hover .images__item-brand {
+    display: block;
+}
