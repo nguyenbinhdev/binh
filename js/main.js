@@ -44,6 +44,11 @@ let products = [
         thumb: './images/yebo.png',
         link: 'https://todolist-react-v2.vercel.app/',
     },
+	{
+        name: 'MusicPlayer',
+        thumb: './images/yebo.png',
+        link: 'https://ngbinhdev.web.app/',
+    },
 ];
 let productsHtml = products.map((product, index) => {
     let temp = (index % 2) ? "push-sm-1" : "";
